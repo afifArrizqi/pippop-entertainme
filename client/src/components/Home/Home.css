@@ -1,0 +1,75 @@
+.Jumbo {
+  display: flex;
+  height: 88vh;
+  width: 100%;
+  flex: 1;
+}
+
+.JumboSelector {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Selector-Movies {
+  position: relative;
+  background-image: linear-gradient(
+    to right,
+    hsl(211, 100%, 50%),
+    hsl(179, 100%, 30%)
+  );
+  z-index: 1;
+}
+
+.Selector-Movies::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(344, 100%, 50%),
+    hsl(344, 69%, 59%)
+  );
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+.Selector-Movies:hover::before {
+  opacity: 1;
+}
+
+.Selector-TVSeries {
+  position: relative;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(152, 100%, 50%),
+    hsl(160, 100%, 30%)
+  );
+  z-index: 1;
+}
+
+.Selector-TVSeries::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(344, 100%, 50%),
+    hsl(344, 69%, 59%)
+  );
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+.Selector-TVSeries:hover::before {
+  opacity: 1;
+}
